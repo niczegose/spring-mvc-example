@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Exchange Rate Service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <form action="/exchange">
+        <h2>Exchange Service</h2>
+        <p>provide currencies symbols you want to exchange</p>
+
+        <div class="form-group">
+            <label for="sel1">Enter base currency:</label>
+            <input type="text" class="form-control" id="sel1" name="base">
+        </div>
+
+        <div class="form-group">
+            <label for="sel2">Enter target currency:</label>
+            <input type="text" class="form-control" id="sel2" name="target">
+        </div>
+
+        <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="text" class="form-control" id="amount" name="amount" >
+        </div>
+
+        <input type="submit" class="btn btn-primary" value="exchange"/>
+
+        <h3>
+            <span th:text="${message}"></span>
+        </h3>
+    </form>
+</div>
+</body>
+</html>
